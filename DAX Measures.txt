@@ -1,0 +1,46 @@
+/* PROJECT: E-Commerce RFM Analysis
+AUTHOR: İLKKAN YAVUZ - Apex Analytics
+DESCRIPTION: This file contains all DAX measures used in the Power BI report.
+*/
+
+---------------------------------------------------------
+-- 1. KEY PERFORMANCE INDICATORS (KPIs)
+---------------------------------------------------------
+
+Cumulative Revenue = CALCULATE([Total Revenue], FILTER(ALLSELECTED('Calendar'), 'Calendar'[Date] <= MAX('Calendar'[Date])))
+
+Avg Order Value = DIVIDE([Total Revenue], DISTINCTCOUNT(OnlineRetail_cleaned[invoice_no]))
+
+Total Quantity Sold = SUM(OnlineRetail_cleaned[quantity])
+
+Total Revenue = SUM(OnlineRetail_cleaned[total_price])
+
+Unique Customers = DISTINCTCOUNT(OnlineRetail_cleaned[customer_id])
+
+---------------------------------------------------------
+-- 2. SEGMENTATION MEASURES
+---------------------------------------------------------
+
+Count of Recency average per country = 
+AVERAGEX(
+	KEEPFILTERS(VALUES('OnlineRetail_cleaned'[Country])),
+	CALCULATE(COUNTA('RFM_Final_Segments'[Recency]))
+)
+
+Count of Customer_Segment average per Recency = 
+AVERAGEX(
+	KEEPFILTERS(VALUES('RFM_Final_Segments'[Recency])),
+	CALCULATE(COUNTA('RFM_Final_Segments'[Customer_Segment]))
+)
+
+---------------------------------------------------------
+-- 3. TOOLTIP & DYNAMIC TEXTS
+---------------------------------------------------------
+
+-- Recency Tooltip Description
+Recency Aciklama = 
+"Average Recency (Days). This metric shows how recently your entire customer base has made a purchase. A lower number indicates a highly active and engaged customer base."
+
+-- RFM Score Tooltip
+Score Explanation = 
+"Scores range from 1 to 5. 5 is the best score (Most recent, most frequent, highest spender)."
