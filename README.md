@@ -1,4 +1,5 @@
 # 🚀 E-Commerce Customer Segmentation (RFM Analysis)
+![Apex Analytics Logo](images/apex_analytics.jpg)
 
 ## 📌 Project Overview
 This end-to-end project analyzes customer purchasing behavior for a UK-based online retail store. Using **Python** for ETL, **SQL** for data modeling, and **Power BI** for visualization, I segmented customers to optimize marketing strategies.
@@ -27,7 +28,7 @@ The analysis revealed critical patterns in customer behavior, validating the Par
 **Overall Customer Health:** The customer base is generally active, with an **Average Recency** of **93.6 days**. Strategies should aim to lower this metric by encouraging more frequent purchases from 'New Customers'.
 
 ## 📸 Dashboard Preview
-![Dashboard Screenshot](executive summary.jpg)
+![Dashboard Screenshot](images/executive_summary.jpg)
 
 ---
 *Developed by **İLKKAN YAVUZ** under the brand **Apex Analytics**.*
