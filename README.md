@@ -1,5 +1,4 @@
 # 🚀 E-Commerce Customer Segmentation (RFM Analysis)
-![Apex Analytics Logo](images/apex_analytics.jpg)
 
 ## 📌 Project Overview
 This end-to-end project analyzes customer purchasing behavior for a UK-based online retail store. Using **Python** for ETL, **SQL** for data modeling, and **Power BI** for visualization, I segmented customers to optimize marketing strategies.
