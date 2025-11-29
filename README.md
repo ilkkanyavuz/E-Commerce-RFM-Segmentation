@@ -28,7 +28,7 @@ The analysis revealed critical patterns in customer behavior, validating the Par
 **Overall Customer Health:** The customer base is generally active, with an **Average Recency** of **93.6 days**. Strategies should aim to lower this metric by encouraging more frequent purchases from 'New Customers'.
 
 ## 📸 Dashboard Preview
-![Dashboard Screenshot](images/apex_analytics.png)
+![Dashboard Screenshot](images/executiv_summary.jpg)
 
 ---
 *Developed by **İLKKAN YAVUZ** under the brand **Apex Analytics**.*
